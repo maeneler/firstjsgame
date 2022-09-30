@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    margin: 15px;
+}
+
+div ol{
+    margin: 10px auto;
+    padding: 15px;
+    text-align: center;
+}
+
+div ol li{
+    font-weight: bold;
+    
+    padding: 5px;
+}
+
+#button{
+    display:flex;
+    margin: 15px;
+    padding: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: grey;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;    
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin: 5px auto;
+}
+#button:hover{
+    transform: scale(1.03);
+}
+#button:active{
+    transform: scale(0.98);
+}
+
+
+
+#game{
+    height: 200px;
+    width: 500px;
+    border: 1px solid black;
+    margin: 15px auto;
+}
+
+#character{
+    height: 50px;
+    width: 20px;
+    background-color: red;
+    position: relative;
+    top: 150px;    
+}
+
+.animate{
+    animation: jump 500ms;
+}
+
+@keyframes jump{
+    0%{top: 150px}
+    30%{top: 100px;
+        transform: rotate(60deg)}
+    70%{top: 100px;
+        transform: rotate(120deg)}
+    100%{top: 150px;
+        transform: rotate(180deg)}
+
+    
+}
+
+#block{
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    position: relative;
+    top: 130px;
+    left: 480px;
+}
+
+.move{
+    animation: move 1s infinite linear;
+}
+@keyframes move{
+    0%{left: 480px}
+    100%{left: -40px}
+}
+
+
+
+/* adding a container with an animated circle to test a restart button*/
+/*
+#circle{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+
+    animation-name: scaleUp;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.17, .67, .32, 1.55)
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(3);
+    }
+
+    50%{
+        transform: scale(-0.5);
+    }
+
+    100%{
+        transform: scale(3);
+    }
+}
+
+#container{
+    width: 500px;
+    height: 500px;
+    box-shadow: 0px 10px 20px #666;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background-color: #FFFD98;
+    border-radius: 10px;
+    align-items: end;
+    margin: 5px auto;
+}
+
+#restartButton{
+    margin-bottom: 40px;
+    padding: 5px;
+    font-weight: bold;
+    border: none;
+    outline: 2px solid #0880ff;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+#restartButton:hover {
+    outline-width: 5px;
+    background-color: #eaf4ff;
+}
+
+#restartButton:active{
+    transform: scale(0.92);
+}
+*/
