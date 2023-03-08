@@ -15,14 +15,13 @@ document.addEventListener('keydown', event => {
     }
 }) 
 
+document.addEventListener('touchstart', () => {
+    jump();
+});
+
 function move(){    
     block.classList.add("move");   
 }
-
-
-
-
-
 
 const checkDead = setInterval(function(){
     const characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
@@ -32,11 +31,10 @@ const checkDead = setInterval(function(){
     if(blockLeft<20 && blockLeft>0 && characterTop>=130){
         block.style.animation = "none";
         block.style.display = "none";
-        alert("u lost.")
+        alert("you lost.")
         differentText.innerHTML = "Play again!"
     }
 }, 10)
-
 
 let restart = document.getElementById("button")
     restart.addEventListener("click", restartGame, false)
@@ -47,25 +45,3 @@ let restart = document.getElementById("button")
         block.style.animation = "";
         block.style.display = "";
     }
-
-
-
-
-//restart function for the restart button with circle
-/*
-let restartButton = document.querySelector("#restartButton");
-    restartButton.addEventListener("click", restartAnimation, false);
-
-    function restartAnimation() {
-      let circle = document.querySelector("#circle");
-
-      circle.style.animationName = "none";
-
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          circle.style.animationName = ""
-        }, 0);
-      });
-    }
-
-    */
