@@ -13,21 +13,20 @@ h1 {
     margin: 15px;
 }
 
-div ol{
+div ul{
     margin: 10px auto;
     padding: 15px;
     text-align: center;
 }
 
-div ol li{
+div ul li{
     font-weight: bold;
-    
+    list-style-type: none;
     padding: 5px;
 }
 
 #button{
     display:flex;
-    margin: 15px;
     padding: 5px;
     width: 100px;
     height: 40px;
@@ -55,15 +54,21 @@ div ol li{
     width: 500px;
     border: 1px solid black;
     margin: 15px auto;
+    overflow: hidden;
 }
+
+
 
 #character{
     height: 50px;
     width: 20px;
     background-color: red;
     position: relative;
-    top: 150px;    
+    top: 150px;
+    margin: 0 0 0 1px;    
 }
+
+
 
 .animate{
     animation: jump 500ms;
@@ -98,66 +103,30 @@ div ol li{
     100%{left: -40px}
 }
 
-
-
-/* adding a container with an animated circle to test a restart button*/
-/*
-#circle{
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    border-radius: 50%;
-
-    animation-name: scaleUp;
-    animation-iteration-count: 1;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-timing-function: cubic-bezier(.17, .67, .32, 1.55)
-}
-
-@keyframes scaleUp {
-    0% {
-        transform: scale(3);
+@media (max-width: 520px){
+    #game{
+        width: 400px;
     }
 
-    50%{
-        transform: scale(-0.5);
+    #block{
+        left: 380px;
     }
-
-    100%{
-        transform: scale(3);
+    @keyframes move{
+        0%{left: 380px}
+        100%{left: -40px}
     }
 }
 
-#container{
-    width: 500px;
-    height: 500px;
-    box-shadow: 0px 10px 20px #666;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
-    background-color: #FFFD98;
-    border-radius: 10px;
-    align-items: end;
-    margin: 5px auto;
-}
+@media (max-width: 420px){
+    #game{
+        width: 300px;
+    }
 
-#restartButton{
-    margin-bottom: 40px;
-    padding: 5px;
-    font-weight: bold;
-    border: none;
-    outline: 2px solid #0880ff;
-    border-radius: 5px;
-    background-color: #FFF;
+    #block{
+        left: 280px;
+    }
+    @keyframes move{
+        0%{left: 280px}
+        100%{left: -40px}
+    }
 }
-
-#restartButton:hover {
-    outline-width: 5px;
-    background-color: #eaf4ff;
-}
-
-#restartButton:active{
-    transform: scale(0.92);
-}
-*/
